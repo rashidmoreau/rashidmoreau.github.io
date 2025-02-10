@@ -1,0 +1,79 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Color Palette */
+:root {
+    --primary-color: #F7B267;
+    --secondary-color: #F79D65;
+    --accent-color: #F4845F;
+    --highlight-color: #F27059;
+    --dark-color: #F25C54;
+    --text-color: #333;
+    --background-color: #fff;
+}
+
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--dark-color);
+}
+
+header p {
+    font-style: italic;
+    color: var(--dark-color);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--highlight-color);
+    text-align: center;
+    padding: 10px;
+    color: var(--background-color);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
