@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 html, body {
     height: 100%;
     margin: 0;
@@ -6,12 +8,12 @@ html, body {
     flex-direction: column;
     background-color: #f4f4f4;
     color: #333;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Poppins', sans-serif;  /* Updated font-family */
     text-align: center;
 }
 
 header {
-    background-color: #222;
+    background-color: #63595C;
     color: white;
     padding: 20px;
 }
@@ -22,7 +24,7 @@ main {
 }
 
 footer {
-    background-color: #222;
+    background-color: #63595C;
     color: white;
     padding: 10px;
     width: 100%;
@@ -43,19 +45,20 @@ footer ul li {
 }
 
 a {
-    color: #d82e2e;
+    color: #DCC7BE;
     text-decoration: none;
     margin: 0 10px;
 }
 
 a:hover {
     text-decoration: underline;
+    color:#FB3640;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    background-color: #222;
+    background-color: #63595C;
     overflow: hidden;
     text-align: center;
     margin: 0;
