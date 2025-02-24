@@ -71,7 +71,6 @@ main {
 footer {
     background-color: var(--highlight-color);
     text-align: center;
-    padding: 10px;
     color: var(--background-color);
     position: relative;
     bottom: 0;
