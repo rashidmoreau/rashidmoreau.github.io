@@ -8,27 +8,34 @@ html, body {
     flex-direction: column;
     background-color: #f4f4f4;
     color: #333;
-    font-family: 'Poppins', sans-serif;  /* Updated font-family */
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
+/* HEADER */
 header {
     background-color: #63595C;
     color: white;
     padding: 20px;
 }
 
+/* MAIN CONTENT */
 main {
     flex: 1;
     padding: 20px;
+    max-width: 1200px; /* Prevents stretching on large screens */
+    width: 90%; /* Responsive width */
+    margin: 0 auto; /* Centers the content */
 }
 
+/* FOOTER */
 footer {
     background-color: #63595C;
     color: white;
     width: 100%;
     text-align: center;
-} 
+    padding: 10px;
+}
 
 footer ul {
     list-style-type: none;
@@ -43,6 +50,7 @@ footer ul li {
     margin: 0 15px;
 }
 
+/* LINKS */
 a {
     color: #DCC7BE;
     text-decoration: none;
@@ -51,9 +59,10 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color:#FB3640;
+    color: #FB3640;
 }
 
+/* NAVIGATION */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -64,7 +73,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     padding: 10px 15px;
 }
 
@@ -79,11 +88,44 @@ nav ul li a:hover {
 }
 
 ul {
-    list-style-type: none;  
-    padding: 0;            
-    text-align: center;    
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
 }
 
 ul li {
-    margin: 10px 0;         
+    margin: 10px 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    footer ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+    main {
+        width: 85%;
+    }
+}
+
+@media (min-width: 993px) {
+    main {
+        width: 80%;
+    }
 }
