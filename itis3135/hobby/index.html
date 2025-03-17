@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Playing and Learning the Guitar</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e30;
+            color: #f4e8c1;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #383863;
+            padding: 20px;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: #f4a261;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: #ff7f50;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        section {
+            display: none;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        section:first-of-type {
+            display: block;
+        }
+        table {
+            margin: auto;
+        }
+        figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        figcaption {
+            font-style: italic;
+            margin-top: 5px;
+        }
+        footer {
+            background-color: #383863;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Playing and Learning the Guitar</h1>
+        <nav>
+            <a onclick="showSection('home')">Home</a> |
+            <a onclick="showSection('about')">About</a> |
+            <a onclick="showSection('schedule')">Best Times</a> |
+            <a onclick="showSection('locations')">Best Locations</a> |
+            <a onclick="showSection('how')">How To Start</a> |
+            <a onclick="showSection('why')">Why I Love It</a> |
+            <a onclick="showSection('ai-prompts')">AI Prompts</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to my guitar learning journey! This site is dedicated to exploring the joys of playing the guitar.</p>
+            <p>Learn about techniques, best practices, and the incredible impact of music.</p>
+            <figure>
+                <img src="images/meguitar2.jpeg" alt="Person playing guitar">
+                <figcaption>Strumming melodies that resonate with the soul.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="about">
+            <h2>About</h2>
+            <p>Guitar playing is a lifelong journey that offers endless possibilities for creativity and self-expression.</p>
+            <p>Whether you play for fun, performance, or professional reasons, the guitar is an instrument that connects people worldwide.</p>
+            <figure>
+                <img src="images/indoorguitar.webp" alt="Learning guitar">
+                <figcaption>Practicing chord transitions is key to mastery.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="schedule">
+            <h2>Best Times</h2>
+            <p>Practicing at the right time can enhance your progress. Here’s a simple guide:</p>
+            <table>
+                <tr><th>Time of Day</th><th>Best Activity</th></tr>
+                <tr><td>Morning</td><td>Finger exercises and warm-ups</td></tr>
+                <tr><td>Afternoon</td><td>Learning new songs</td></tr>
+                <tr><td>Evening</td><td>Jamming and improvisation</td></tr>
+            </table>
+            <h3>Recommended Practice Session</h3>
+            <table>
+                <tr><th>Minutes</th><th>Activity</th></tr>
+                <tr><td>0-5</td><td>Warm-up exercises</td></tr>
+                <tr><td>5-15</td><td>Chord transitions and scales</td></tr>
+                <tr><td>15-25</td><td>Playing a song or riff</td></tr>
+                <tr><td>25-30</td><td>Improvisation or jamming</td></tr>
+            </table>
+        </section>
+        
+        <section id="locations">
+            <h2>Best Locations</h2>
+            <p>Guitar playing can be enjoyed anywhere, but some places truly enhance the experience:</p>
+            <ul>
+                <li><strong>Parks:</strong> Open-air settings with natural acoustics create a relaxing and immersive environment.</li>
+                <li><strong>Beaches:</strong> The sound of waves complements strumming and provides a meditative backdrop.</li>
+                <li><strong>Cafés:</strong> Playing in cozy cafés can be a great way to share your music with a small audience.</li>
+                <li><strong>Campfires:</strong> There’s nothing quite like playing guitar under the stars with friends.</li>
+            </ul>
+            <figure>
+                <img src="images/outdoorguitar.webp" alt="Outdoor guitar playing">
+                <figcaption>A serene environment enhances creativity.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="how">
+            <h2>How to Start</h2>
+            <p>Getting started with guitar is easy! Follow these simple steps:</p>
+            <ul>
+                <li>Choose the right guitar for your needs (acoustic, electric, classical).</li>
+                <li>Learn basic chords and strumming patterns.</li>
+                <li>Practice consistently, starting with 10-15 minutes a day.</li>
+            </ul>
+        </section>
+        
+        <section id="why">
+            <h2>Why I Love It</h2>
+            <p>Playing the guitar provides a sense of relaxation, creativity, and fulfillment. It is my escape from stress and a source of joy.</p>
+            <p>Every song I learn feels like a new accomplishment, and every chord progression tells a story that words cannot.</p>
+            <p>One of my favorite aspects is the way guitar playing connects people. Jamming with friends or playing for family creates lasting memories.</p>
+            <figure>
+                <img src="images/meguitar1.png" alt="Emotional guitar playing">
+                <figcaption>Music is a universal language.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="ai-prompts">
+            <h2>AI Prompts</h2>
+            <p>Below are the AI-generated prompts I used while creating this page.</p>
+            <ul>
+                <li>"Create a photorealistic image of a person playing an acoustic guitar in a cozy indoor environment, with warm lighting and a relaxed atmosphere."</li>
+                <li>"Create a photorealistic image of an outdoor setting with a person playing an acoustic guitar near a campfire, surrounded by nature."</li>
+                <li>"Generate descriptions for each section."</li>
+                <li>"Generate tables for effective practices"</li>
+                <li>"Generate captions for pictures."</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Designed by Moreau Designs &copy; 2025</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
