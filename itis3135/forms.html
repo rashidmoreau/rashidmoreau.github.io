@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <title>Rashid Moreau’s Raging Mammoth | ITIS3135 | Form</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Sign Up for Raging Mammoth Services</legend>
+    
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required size="30"><br><br>
+    
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required size="30"><br><br>
+    
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required size="30"><br><br>
+    
+                <p><strong>What services are you interested in?</strong></p>
+                <input type="checkbox" id="branding" name="services" value="branding">
+                <label for="branding">Branding</label><br>
+                <input type="checkbox" id="webdev" name="services" value="webdev">
+                <label for="webdev">Web Development</label><br>
+                <input type="checkbox" id="marketing" name="services" value="marketing">
+                <label for="marketing">Marketing</label><br><br>
+    
+                <p><strong>Preferred Contact Method:</strong></p>
+                <input type="radio" id="contact-email" name="contactMethod" value="email" required>
+                <label for="contact-email">Email</label><br>
+                <input type="radio" id="contact-phone" name="contactMethod" value="phone">
+                <label for="contact-phone">Phone</label><br><br>
+    
+                <label for="budget">Project Budget:</label>
+                <select id="budget" name="budget" required>
+                    <option value="">--Select Your Budget--</option>
+                    <option value="500">$0 - $500</option>
+                    <option value="1000">$500 - $1,000</option>
+                    <option value="5000">$1,000 - $5,000</option>
+                    <option value="10000">Over $5,000</option>
+                </select><br><br>
+    
+                <input type="reset" value="Reset Form">
+                <input type="submit" value="Submit Inquiry">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
