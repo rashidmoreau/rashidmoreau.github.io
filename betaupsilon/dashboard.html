@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPA Tracker</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/gpa.js" defer></script>
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <!-- Dynamic Header -->
+  <div id="header-container"></div>
+
+  <!-- Dynamic Sidebars -->
+  <div id="sidebar-container"></div>
+
+  <main>
+    <h1>GPA Tracker</h1>
+
+    <input type="text" id="searchInput" placeholder="Search by name or major" />
+
+    <table id="gpaTable">
+      <thead>
+        <tr>
+          <th data-sort="name">Name ⬍</th>
+          <th data-sort="major">Major ⬍</th>
+          <th data-sort="gpa">GPA ⬍</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filled by JavaScript -->
+      </tbody>
+    </table>
+
+    <p id="averageGPA"></p>
+
+    <section class="gpa-calculator">
+      <h2>Calculate & Add Your GPA</h2>
+
+      <form id="gpaForm">
+        <input type="text" id="nameInput" placeholder="Full Name" required />
+        <input type="text" id="majorInput" placeholder="Major" required />
+
+        <div id="courseInputs">
+          <div class="course-row">
+            <input type="text" placeholder="Grade (A-F)" class="gradeInput" required />
+            <input type="number" placeholder="Credits" class="creditInput" required />
+          </div>
+        </div>
+
+        <button type="button" id="addCourse">+ Add Another Course</button>
+        <button type="submit">Calculate GPA & Add</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+</body>
+</html>

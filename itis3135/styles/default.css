@@ -22,7 +22,6 @@ header {
 /* MAIN CONTENT */
 main {
     flex: 1;
-    padding: 20px;
     max-width: 1200px; /* Prevents stretching on large screens */
     width: 90%; /* Responsive width */
     margin: 0 auto; /* Centers the content */
@@ -34,7 +33,6 @@ footer {
     color: white;
     width: 100%;
     text-align: center;
-    padding: 10px;
 }
 
 footer ul {

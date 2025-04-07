@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Help Request</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/help.js" defer></script>
+  <script src="scripts/script.js" defer></script>
+
+</head>
+<body>
+  <div id="header-container"></div>
+  <div id="sidebar-container"></div>
+
+  <main>
+    <h1>Academic Help Request</h1>
+    <p>If you're struggling with a course or just want extra academic support, fill out the form below and we'll connect you with the right resources.</p>
+
+    <form id="helpForm" class="help-form">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="major">Major:</label>
+      <input type="text" id="major" required />
+
+      <label for="course">Course Name/Code:</label>
+      <input type="text" id="course" required />
+
+      <label for="type">Type of Help Needed:</label>
+      <select id="type" required>
+        <option value="">-- Select an Option --</option>
+        <option value="tutoring">Tutoring</option>
+        <option value="mentoring">Mentoring</option>
+        <option value="study-group">Study Group</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="details">Details / Questions:</label>
+      <textarea id="details" rows="6" required></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+
+    <div id="confirmation" class="hidden">
+      <h2>🎉 Request Submitted!</h2>
+      <p>Thank you for reaching out. The Academic Chair will contact you soon.</p>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+</body>
+</html>
