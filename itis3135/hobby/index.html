@@ -65,6 +65,10 @@
             padding: 15px;
             text-align: center;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+        }           
     </style>
 </head>
 <body>
@@ -174,7 +178,7 @@
 
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('section').forEach(section => {
+            document.querySelectorAll('section').forEach((section) => {
                 section.style.display = 'none';
             });
             document.getElementById(sectionId).style.display = 'block';

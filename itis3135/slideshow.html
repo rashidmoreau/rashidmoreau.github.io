@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rashid Moreau Slideshow | ITIS3135</title>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="scripts/HTMLInclude.js" defer></script>
+  <style>
+    .container { position: relative; max-width: 1000px; margin: auto; }
+    .mySlides { display: none; }
+    .cursor { cursor: pointer; }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .next { right: 0; border-radius: 3px 0 0 3px; }
+    .prev { left: 0; border-radius: 0 3px 3px 0; }
+    .prev:hover, .next:hover { background-color: rgba(0, 0, 0, 0.8); }
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 8px 16px;
+      color: white;
+    }
+    .row:after { content: ""; display: table; clear: both; }
+    .column { float: left; width: 8.33%; }
+    .demo { opacity: 0.6; width: 100%; }
+    .active, .demo:hover { opacity: 1; }
+    .ai-prompts {
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: left;
+      padding: 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+
+  <main>
+    <h2 style="text-align:center">Slideshow of Images – Rashid Moreau</h2>
+
+    <div class="container">
+        <div class="mySlides"><div class="numbertext">1 / 12</div><img src="images/rose.png" alt="R – for Rose" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">2 / 12</div><img src="images/armchair.png" alt="A – for Armchair" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">3 / 12</div><img src="images/soccerball.png" alt="S – for Soccer Ball" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">4 / 12</div><img src="images/hamburger.png" alt="H – for Hamburger" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">5 / 12</div><img src="images/icecream.png" alt="I – for Ice Cream" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">6 / 12</div><img src="images/desert.png" alt="D – for Desert" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">7 / 12</div><img src="images/money.png" alt="M – for Money" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">8 / 12</div><img src="images/owl.png" alt="O – for Owl" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">9 / 12</div><img src="images/rosebush.png" alt="R – for Rose (again)" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">10 / 12</div><img src="images/elephant.png" alt="E – for Elephant" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">11 / 12</div><img src="images/apple.png" alt="A – for Apple" style="width:100%"></div>
+        <div class="mySlides"><div class="numbertext">12 / 12</div><img src="images/umbrella.png" alt="U – for Umbrella" style="width:100%"></div>
+        
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="caption-container">
+        <p id="caption">R – for Rose</p>
+      </div>
+
+      <div class="row">
+        <div class="column"><img class="demo cursor" src="images/rose2.png" onclick="currentSlide(1)" alt="R – for Rose"></div>
+        <div class="column"><img class="demo cursor" src="images/armchair2.png" onclick="currentSlide(2)" alt="A – for Armchair"></div>
+        <div class="column"><img class="demo cursor" src="images/soccerball2.png" onclick="currentSlide(3)" alt="S – for Soccer Ball"></div>
+        <div class="column"><img class="demo cursor" src="images/hamburger2.png" onclick="currentSlide(4)" alt="H – for Hamburger"></div>
+        <div class="column"><img class="demo cursor" src="images/icecream2.png" onclick="currentSlide(5)" alt="I – for Ice Cream"></div>
+        <div class="column"><img class="demo cursor" src="images/desert2.png" onclick="currentSlide(6)" alt="D – for Desert"></div>
+        <div class="column"><img class="demo cursor" src="images/money2.png" onclick="currentSlide(7)" alt="M – for Money"></div>
+        <div class="column"><img class="demo cursor" src="images/owl2.png" onclick="currentSlide(8)" alt="O – for Owl"></div>
+        <div class="column"><img class="demo cursor" src="images/rosebush2.png" onclick="currentSlide(9)" alt="R – for Rose (again)"></div>
+        <div class="column"><img class="demo cursor" src="images/elephant2.png" onclick="currentSlide(10)" alt="E – for Elephant"></div>
+        <div class="column"><img class="demo cursor" src="images/apple2.png" onclick="currentSlide(11)" alt="A – for Apple"></div>
+        <div class="column"><img class="demo cursor" src="images/umbrella2.png" onclick="currentSlide(12)" alt="U – for Umbrella"></div>
+      </div>
+    </div>
+
+    <div class="ai-prompts">
+      <h3>AI Prompts Used</h3>
+      <ul>
+        <li>R – “A realistic red rose in a landscape photo”</li>
+        <li>A – “Modern armchair in a minimalist living room”</li>
+        <li>S – “Soccer ball on green grass field, sunny day”</li>
+        <li>H – “Juicy hamburger on a wooden plate”</li>
+        <li>I – “Vanilla ice cream in cone on summer day”</li>
+        <li>D – “Desert dunes under blue sky”</li>
+        <li>M – “Stacks of cash on dark background”</li>
+        <li>O – “Owl perched on tree branch, daylight”</li>
+        <li>R – “A rose bush in full bloom”</li>
+        <li>E – “Elephant walking in the wild savannah”</li>
+        <li>A – “Bright red apple on rustic table”</li>
+        <li>U – “Umbrella in the rain on city street”</li>
+      </ul>
+      <p><strong>Tool Used:</strong> DALL·E (OpenAI)</p>
+    </div>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script>
+    let slideIndex = 1; 
+
+  
+    function showSlides(n) {
+      const slides = document.getElementsByClassName("mySlides");
+      const dots = document.getElementsByClassName("demo");
+      const captionText = document.getElementById("caption");
+  
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+  
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+  
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+  
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+    showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  </script>
+</body>
+</html>
