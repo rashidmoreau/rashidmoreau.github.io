@@ -33,6 +33,30 @@ function pointToApproxGrade(gpa) {
   return "F";
 }
 
+function setupEditHandlers() {
+  document.querySelectorAll(".editBtn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const index = parseInt(btn.dataset.index);
+      const member = members[index];
+
+      document.getElementById("nameInput").value = member.name;
+      document.getElementById("majorInput").value = member.major;
+
+      const gpaGrade = pointToApproxGrade(member.gpa);
+
+      document.getElementById("courseInputs").innerHTML = `
+        <div class="course-row">
+          <input type="text" value="${gpaGrade}" class="gradeInput" required />
+          <input type="number" value="3" class="creditInput" required />
+        </div>
+      `;
+
+      members.splice(index, 1);
+      // wait for form to submit before calling loadTable again
+    });
+  });
+}
+
 function loadTable(data, sortKey = null) {
   const tbody = document.querySelector("#gpaTable tbody");
   tbody.innerHTML = "";
@@ -75,16 +99,31 @@ function loadTable(data, sortKey = null) {
   const avg = (totalGPA / sortedData.length).toFixed(2);
   document.getElementById("averageGPA").textContent = `Average GPA: ${avg}`;
 
+  setupEditHandlers();
+}
+
+function setupDeleteHandlers() {
+  document.querySelectorAll(".deleteBtn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const index = parseInt(btn.dataset.index);
+      if (!isNaN(index) && confirm("Are you sure you want to delete this entry?")) {
+        members.splice(index, 1);
+        loadTable(members, sortState.key);
+      }
+    });
+  });
+}
+
 function setupSearch() {
   const input = document.getElementById("searchInput");
-
   input.addEventListener("input", () => {
     const search = input.value.toLowerCase();
     const filtered = members.filter((m) =>
       m.name.toLowerCase().includes(search) ||
-      m.major.toLowerCase().includes(search)
+      m.major.toLowerCase().includes(search) ||
+      m.gpa.toFixed(2).includes(search)
     );
-    loadTable(filtered);
+    loadTable(filtered, sortState.key);
   });
 }
 
@@ -133,7 +172,7 @@ function setupGPAForm() {
     };
 
     members.push(newMember);
-    loadTable(members);
+    loadTable(members, sortState.key);
     form.reset();
     courseInputs.innerHTML = `
       <div class="course-row">
@@ -144,58 +183,17 @@ function setupGPAForm() {
   });
 }
 
-function setupEditDeleteHandlers() {
-  // Delete functionality
-  document.querySelectorAll(".deleteBtn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const index = btn.dataset.index;
-      if (confirm("Are you sure you want to delete this entry?")) {
-        members.splice(index, 1);
-        loadTable(members);
-      }
-    });
-  });
-
-  setupEditDeleteHandlers();
-}
-
-  // Edit functionality
-  document.querySelectorAll(".editBtn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const index = btn.dataset.index;
-      const member = members[index];
-
-      document.getElementById("nameInput").value = member.name;
-      document.getElementById("majorInput").value = member.major;
-
-      const gpaGrade = pointToApproxGrade(member.gpa);
-
-      document.getElementById("courseInputs").innerHTML = `
-        <div class="course-row">
-          <input type="text" value="${gpaGrade}" class="gradeInput" required />
-          <input type="number" value="3" class="creditInput" required />
-        </div>
-      `;
-
-      members.splice(index, 1);
-      loadTable(members);
-    });
-  });
-}
-
 function setupSorting() {
   const headers = document.querySelectorAll("#gpaTable th[data-sort]");
   headers.forEach((header) => {
     header.addEventListener("click", () => {
       const sortKey = header.dataset.sort;
-
       if (sortState.key === sortKey) {
         sortState.direction = sortState.direction === "asc" ? "desc" : "asc";
       } else {
         sortState.key = sortKey;
         sortState.direction = "asc";
       }
-
       loadTable(members, sortState.key);
     });
   });
