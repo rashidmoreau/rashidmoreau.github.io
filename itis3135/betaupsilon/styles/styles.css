@@ -171,7 +171,7 @@ footer {
 
 /* Side Columns */
 .side-elements {
-  position: absolute;
+  position: sticky;
   top: 0;
   bottom: 0;
   padding-top: 8rem;
@@ -182,6 +182,10 @@ footer {
   font-size: 1rem;
   z-index: 1;
   overflow: hidden;
+}
+
+.side-box{
+  position: relative;
 }
 
 .left-side {
@@ -201,6 +205,8 @@ footer {
   border-left: 1px solid rgba(0, 0, 0, 0.05);
   background-color: var(--purple);
 }
+
+
 
 .quick-links-sidebar {
   list-style: none;
